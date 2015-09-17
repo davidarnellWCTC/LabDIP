@@ -1,6 +1,17 @@
 Observations:
 
-Hourly and Salaried Employees
+Hourly and Salaried Employees both have annual salaries that need to be gotten.
+
+They use different methods and variables to calculate this total. However, the
+method name "getAnnualSalary" can be shared between the two even if the rest of
+the variables cannot be.
+
+While I was unable to make the classes fully polymorphic, the start class only
+knows the HRService class which only works with the Employee interface to get
+the annual salary. 
+
+I feel like the HR class should be calculating the annual salary and not the
+individual employee class but I couldn't figure out how.
 
 
 
