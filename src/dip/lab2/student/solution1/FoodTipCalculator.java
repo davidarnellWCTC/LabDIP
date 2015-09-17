@@ -12,9 +12,9 @@ public class FoodTipCalculator implements TipCalculator{
     private static final double MIN_BILL = 0.00;
     private static final String BILL_ENTRY_ERR =
             "Error: bill must be greater than or equal to " + MIN_BILL;
-    private double GOOD_RATE = 0.20;
-    private double FAIR_RATE = 0.15;
-    private double POOR_RATE = 0.10;
+    private double goodRate;
+    private double fairRate;
+    private double poorRate;
 
     private double bill;
 //    public enum ServiceQuality {
@@ -26,6 +26,10 @@ public class FoodTipCalculator implements TipCalculator{
         //this.serviceQuality = q;
         this.setServiceQuality(q);
         this.setBill(billAmt);
+        
+        goodRate = 0.20; // set as default
+        fairRate = 0.15;
+        poorRate = 0.10;
     }
 
     public double getTip() {
@@ -33,13 +37,13 @@ public class FoodTipCalculator implements TipCalculator{
 
         switch(serviceQuality) {
             case GOOD:
-                tip = bill * GOOD_RATE;
+                tip = bill * goodRate;
                 break;
             case FAIR:
-                tip = bill * FAIR_RATE;
+                tip = bill * fairRate;
                 break;
             case POOR:
-                tip = bill * POOR_RATE;
+                tip = bill * poorRate;
                 break;
         }
         return tip;
@@ -63,32 +67,32 @@ public class FoodTipCalculator implements TipCalculator{
     }
 
     @Override
-    public void setGOOD_RATE(double GOOD_RATE) {
-        this.GOOD_RATE = GOOD_RATE;
+    public void setGoodRate(double goodRate) {
+        this.goodRate = goodRate;
     }
 
     @Override
-    public double getGOOD_RATE() {
-        return GOOD_RATE;
+    public double getGoodRate() {
+        return goodRate;
     }
 
     @Override
-    public void setFAIR_RATE(double FAIR_RATE) {
-        this.FAIR_RATE = FAIR_RATE;
+    public void setFairRate(double fairRate) {
+        this.fairRate = fairRate;
     }
 
     @Override
-    public double getFAIR_RATE() {
-        return FAIR_RATE;
+    public double getFairRate() {
+        return fairRate;
     }
 
     @Override
-    public void setPOOR_RATE(double POOR_RATE) {
-        this.POOR_RATE = POOR_RATE;
+    public void setPoorRate(double poorRate) {
+        this.poorRate = poorRate;
     }
 
     @Override
-    public double getPOOR_RATE() {
-        return POOR_RATE;
+    public double getPoorRate() {
+        return poorRate;
     }
 }

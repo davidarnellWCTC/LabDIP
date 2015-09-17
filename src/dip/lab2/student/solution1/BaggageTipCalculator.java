@@ -16,9 +16,9 @@ public class BaggageTipCalculator implements TipCalculator {
 //    private static final String BILL_ENTRY_ERR =
 //            "Error: bill must be between " + MIN_BILL + " and "
 //            + MAX_BILL;
-    private static double GOOD_RATE = 0.20;
-    private static double FAIR_RATE = 0.15;
-    private static double POOR_RATE = 0.10;
+    private double goodRate;
+    private double fairRate;
+    private double poorRate;
 
     private double baseTipPerBag;
     private int bagCount;
@@ -33,6 +33,10 @@ public class BaggageTipCalculator implements TipCalculator {
         this.setBagCount(bags);
 
         baseTipPerBag = 1.00; // set default value
+        
+        goodRate = 0.20; // set default value
+        fairRate = 0.15;
+        poorRate = 0.10;
     }
 
     // name changed to "getTip" to share method with FodServiceTipCalculator
@@ -41,13 +45,13 @@ public class BaggageTipCalculator implements TipCalculator {
 
         switch(serviceQuality) {
             case GOOD:
-                tip = baseTipPerBag * bagCount * (1 + GOOD_RATE);
+                tip = baseTipPerBag * bagCount * (1 + goodRate);
                 break;
             case FAIR:
-                tip = baseTipPerBag * bagCount * (1 + FAIR_RATE);
+                tip = baseTipPerBag * bagCount * (1 + fairRate);
                 break;
             case POOR:
-                tip = baseTipPerBag * bagCount * (1 + POOR_RATE);
+                tip = baseTipPerBag * bagCount * (1 + poorRate);
                 break;
         }
 
@@ -89,32 +93,32 @@ public class BaggageTipCalculator implements TipCalculator {
     }
     
     @Override
-    public void setGOOD_RATE(double GOOD_RATE) {
-        this.GOOD_RATE = GOOD_RATE;
+    public void setGoodRate(double goodRate) {
+        this.goodRate = goodRate;
     }
 
     @Override
-    public double getGOOD_RATE() {
-        return GOOD_RATE;
+    public double getGoodRate() {
+        return goodRate;
     }
 
     @Override
-    public void setFAIR_RATE(double FAIR_RATE) {
-        this.FAIR_RATE = FAIR_RATE;
+    public void setFairRate(double fairRate) {
+        this.fairRate = fairRate;
     }
 
     @Override
-    public double getFAIR_RATE() {
-        return FAIR_RATE;
+    public double getFairRate() {
+        return fairRate;
     }
 
     @Override
-    public void setPOOR_RATE(double POOR_RATE) {
-        this.POOR_RATE = POOR_RATE;
+    public void setPoorRate(double poorRate) {
+        this.poorRate = poorRate;
     }
 
     @Override
-    public double getPOOR_RATE() {
-        return POOR_RATE;
+    public double getPoorRate() {
+        return poorRate;
     }
 }

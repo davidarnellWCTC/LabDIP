@@ -23,11 +23,11 @@ public interface TipCalculator {
     // Everything that inherits from TipCalculator will base the tip on the
     // rate determined by the ServiceQuality
     // Each class should be able to have the rates changed
-    public abstract void setGOOD_RATE(double GOOD_RATE);
-    public abstract double getGOOD_RATE();
-    public abstract void setFAIR_RATE(double FAIR_RATE);
-    public abstract double getFAIR_RATE();
-    public abstract void setPOOR_RATE(double POOR_RATE);
-    public abstract double getPOOR_RATE();    
+    public abstract void setGoodRate(double goodRate);
+    public abstract double getGoodRate();
+    public abstract void setFairRate(double fairRate);
+    public abstract double getFairRate();
+    public abstract void setPoorRate(double poorRate);
+    public abstract double getPoorRate();    
     
 }
