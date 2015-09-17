@@ -13,7 +13,7 @@ public interface Employee {
     // The only thing hourly and salaried employees have in common is the annualSalary
     // They are not fully polymorphic
     // The classes are just too different, I couldn't figure out how to get more
-    public abstract double getAnnualSalary();
+    public abstract double getTotalAnnualPay();
     
     
 //    // You gotta question if these are appropriate for ALL employees?

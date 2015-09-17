@@ -13,16 +13,38 @@ public class SalariedEmployee implements Employee {
     private double annualSalary;
     
     private double totalAnnualPay;
-
-        public SalariedEmployee(double annualSalary, double annualBonus) {
-//        setAnnualSalary(annualSalary);
-//        setAnnualBonus(annualBonus);
-            this.annualSalary = annualSalary;
-            this.annualBonus = annualBonus;
+    
+    public SalariedEmployee(double annualSalary, double annualBonus) {
+        setAnnualSalary(annualSalary);
+        setAnnualBonus(annualBonus);
+//            this.annualSalary = annualSalary;
+//            this.annualBonus = annualBonus;
+    }
+    
+    public double getAnnualBonus(){
+        return annualBonus;
+    }
+    
+    public void setAnnualBonus(double annualBonus){
+        if(annualBonus < 0) {
+            throw new IllegalArgumentException();
+        }
+        this.annualBonus = annualBonus;
+    }
+    
+    public double getAnnualSalary(){
+        return annualSalary;
+    }
+    
+    public void setAnnualSalary(double annualSalary){
+        if(annualSalary < 0) {
+            throw new IllegalArgumentException();
+        }
+        this.annualSalary = annualSalary;
     }
     
     @Override
-    public double getAnnualSalary() {
+    public double getTotalAnnualPay() {
         // The annual pay for a salaried employee is calculated by adding
         // the annual bonus to the annual salary
         totalAnnualPay = annualBonus + annualSalary;

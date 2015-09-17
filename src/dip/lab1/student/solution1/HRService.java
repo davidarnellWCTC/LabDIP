@@ -34,7 +34,7 @@ public class HRService {
 //        }
         
 ////        employeeAnnualCompensation = employee.getAnnualSalary();        
-        return employee.getAnnualSalary();
+        return employee.getTotalAnnualPay();
     }
     
 //    @Override
