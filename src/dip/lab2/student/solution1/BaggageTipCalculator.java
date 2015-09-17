@@ -8,17 +8,17 @@ package dip.lab2.student.solution1;
  *
  * @author your name goes here
  */
-public class BaggageServiceTipCalculator implements TippableService {
+public class BaggageTipCalculator implements TipCalculator {
     // These variables are removed since the bill can be more than 100
     // Leaving the max billable amount to this class makes fragile code
-//    private static final double MIN_BILL = 0.00;
+    private static final double MIN_BILL = 0.00;
 //    private static final double MAX_BILL = 100.00;
 //    private static final String BILL_ENTRY_ERR =
 //            "Error: bill must be between " + MIN_BILL + " and "
 //            + MAX_BILL;
-    private static final double GOOD_RATE = 0.20;
-    private static final double FAIR_RATE = 0.15;
-    private static final double POOR_RATE = 0.10;
+    private static double GOOD_RATE = 0.20;
+    private static double FAIR_RATE = 0.15;
+    private static double POOR_RATE = 0.10;
 
     private double baseTipPerBag;
     private int bagCount;
@@ -27,8 +27,9 @@ public class BaggageServiceTipCalculator implements TippableService {
 //    }
     private ServiceQuality serviceQuality;
 
-    public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
-        this.setServiceRating(q); // perform validation
+    public BaggageTipCalculator(ServiceQuality q, int bags) {
+        //this.serviceQuality = q;
+        this.setServiceQuality(q); // perform validation
         this.setBagCount(bags);
 
         baseTipPerBag = 1.00; // set default value
@@ -51,15 +52,6 @@ public class BaggageServiceTipCalculator implements TippableService {
         }
 
         return tip;
-    }
-
-    public final void setServiceRating(ServiceQuality q) {
-        // No need to validate because enums provide type safety!
-        serviceQuality = q;
-    }
-
-    public ServiceQuality getServiceQuality() {
-        return serviceQuality;
     }
 
     public int getBagCount() {
@@ -85,5 +77,44 @@ public class BaggageServiceTipCalculator implements TippableService {
         }
         this.baseTipPerBag = baseTipPerBag;
     }
+    
+        @Override
+    public void setServiceQuality(ServiceQuality q) {
+        serviceQuality = q;
+    }
 
+    @Override
+    public ServiceQuality getServiceQuality() {
+        return serviceQuality;
+    }
+    
+    @Override
+    public void setGOOD_RATE(double GOOD_RATE) {
+        this.GOOD_RATE = GOOD_RATE;
+    }
+
+    @Override
+    public double getGOOD_RATE() {
+        return GOOD_RATE;
+    }
+
+    @Override
+    public void setFAIR_RATE(double FAIR_RATE) {
+        this.FAIR_RATE = FAIR_RATE;
+    }
+
+    @Override
+    public double getFAIR_RATE() {
+        return FAIR_RATE;
+    }
+
+    @Override
+    public void setPOOR_RATE(double POOR_RATE) {
+        this.POOR_RATE = POOR_RATE;
+    }
+
+    @Override
+    public double getPOOR_RATE() {
+        return POOR_RATE;
+    }
 }

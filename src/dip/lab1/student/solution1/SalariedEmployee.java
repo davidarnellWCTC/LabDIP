@@ -6,13 +6,12 @@ package dip.lab1.student.solution1;
  *
  * @author your name goes here
  */
-public class SalariedEmployee implements Employee {
-    
+public class SalariedEmployee implements Employee {    
 
     private double annualBonus;
     private double annualSalary;
     
-    private double totalAnnualPay;
+    //private double totalAnnualPay;
     
     public SalariedEmployee(double annualSalary, double annualBonus) {
         setAnnualSalary(annualSalary);
@@ -47,8 +46,9 @@ public class SalariedEmployee implements Employee {
     public double getTotalAnnualPay() {
         // The annual pay for a salaried employee is calculated by adding
         // the annual bonus to the annual salary
-        totalAnnualPay = annualBonus + annualSalary;
-        return totalAnnualPay;
+        //totalAnnualPay = annualBonus + annualSalary;
+        //return totalAnnualPay;
+        return annualBonus + annualSalary;
     }
     /** default constructor. Is this the best way to go? */
 //    public SalariedEmployee() {}

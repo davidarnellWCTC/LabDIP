@@ -11,7 +11,8 @@ package dip.lab2.student.solution1;
  */
 public class TipService {
     
-    public double getTipAmount(TippableService t){       
+    // The TipService class access the TipCalculator interface to get the tipAmount
+    public double getTipAmount(TipCalculator t){       
         return t.getTip();
     }    
 }

@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  */
 public class HRService {
     
-    private double employeeAnnualCompensation;
+    //private double employeeAnnualCompensation;
     /** 
      * Constants can be used for retrieving annual wages of
      * various employee types. Is this the best way to go? Do we have

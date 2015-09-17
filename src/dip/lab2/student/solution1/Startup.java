@@ -20,19 +20,18 @@ import javax.swing.JOptionPane;
  */
 public class Startup {
     
-    public static enum ServiceQuality {
-           GOOD, FAIR, POOR
-    };
  
-    public static void main(String[] args) {       
+ 
+    public static void main(String[] args) {
         
-
-        TippableService[] tippableService = {
-            new BaggageServiceTipCalculator(ServiceQuality.GOOD, 5),
-            new BaggageServiceTipCalculator(ServiceQuality.FAIR, 3),
-            new BaggageServiceTipCalculator(ServiceQuality.POOR, 7),
-            new FoodServiceTipCalculator(ServiceQuality.POOR, 3.6),
-            new FoodServiceTipCalculator(ServiceQuality.GOOD, 8.90)
+        
+        
+        TipCalculator[] tippableService = {
+            new BaggageTipCalculator(TipCalculator.ServiceQuality.GOOD, 5),
+            new BaggageTipCalculator(TipCalculator.ServiceQuality.FAIR, 3),
+            new BaggageTipCalculator(TipCalculator.ServiceQuality.POOR, 7),
+            new FoodTipCalculator(TipCalculator.ServiceQuality.POOR, 3.6),
+            new FoodTipCalculator(TipCalculator.ServiceQuality.GOOD, 8.90)
         } ;
         
         TipService ts = new TipService();
@@ -42,10 +41,10 @@ public class Startup {
 
         
         
-        for(TippableService i : tippableService){
+        for(TipCalculator i : tippableService){
             int serviceNo = 1;
             System.out.println("Service #" + serviceNo + " gets tipped at: " 
-                    + ts.getTipAmount(i));
+                    + nf.format(ts.getTipAmount(i)));
             // Adding 1 on the next service;
             serviceNo +=1;
         }

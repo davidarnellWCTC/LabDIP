@@ -12,10 +12,10 @@ public class HourlyEmployee implements Employee {
     private double hourlyRate;
     private double totalHrsForYear;
     
-    private double totalAnnualPay;
+    //private double totalAnnualPay;
 
     
-        // This constructor is used by the startup class when a specific instance
+    // This constructor is used by the startup class when a specific instance
     // of this class is made
     // Each constructor takes in 2 doubles, the class figures out what
     // the annual pay is
@@ -63,8 +63,9 @@ public class HourlyEmployee implements Employee {
 
     @Override
     public double getTotalAnnualPay() {
-        totalAnnualPay = hourlyRate * totalHrsForYear;
-        return totalAnnualPay;
+//        totalAnnualPay = hourlyRate * totalHrsForYear;
+//        return totalAnnualPay;
+        return hourlyRate * totalHrsForYear;
     }
 
 }

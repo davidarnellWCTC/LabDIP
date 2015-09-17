@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dip.lab2.student.solution1;
+package dip.lab1.inclass.solution;
 
 /**
  *
- * @author David
+ * @author darnell
  */
-public interface TippableService {
+public interface IEmployee {
     
-    public static enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
-    public abstract double getTip();
-
+    public abstract double getAnnualWages();
     
 }
