@@ -11,4 +11,9 @@ package dip.lab3;
  */
 public class OutputService {
     
+                
+        public void writeText(ITextWriter r){            
+            r.writeText();            
+        }
+    
 }

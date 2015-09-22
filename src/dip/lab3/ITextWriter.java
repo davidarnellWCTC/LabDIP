@@ -7,11 +7,10 @@ package dip.lab3;
 
 /**
  *
- * @author darnell
+ * @author David
  */
-public interface ITextReader {
+public interface ITextWriter {
     
-    public abstract void setTextString();
-    public abstract String getTextString();
+    public abstract void writeText();
     
 }

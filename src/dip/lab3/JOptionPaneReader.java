@@ -5,30 +5,29 @@
  */
 package dip.lab3;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author darnell
+ * @author David
  */
-public class ConsoleReader implements ITextReader {
-    
-    Scanner scanner = new Scanner(System.in);
+public class JOptionPaneReader implements ITextReader {
 
-    private String text; 
+    String text;
 
-//    public ConsoleReader(String text) {
+//    public JOptionPaneReader(String text) {
 //        this.text = text;
-//    }    
-
+//    }
+    
+    
+    
     @Override
     public void setTextString() {
-        System.out.println("Enter the line of text: ");
-        this.text = scanner.next();
+        this.text = JOptionPane.showInputDialog(null, "Enter the line of text: ");
     }
 
     @Override
     public String getTextString() {
         return text;
-    }    
+    } 
 }

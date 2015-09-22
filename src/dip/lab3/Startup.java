@@ -13,6 +13,21 @@ public class Startup {
     
     public static void main(String[] args) {
         
+        // Texting the objects
+        
+        ITextReader readTest = new ConsoleReader();
+        
+        //readTest.setTextString();
+        
+        InputService is = new InputService();
+        OutputService os = new OutputService();
+        
+        is.readText(readTest);
+        
+        ITextWriter writeTest = new ConsoleWriter(readTest);
+        
+        os.writeText(writeTest);
+        
     }
     
 }

@@ -11,4 +11,11 @@ package dip.lab3;
  */
 public class InputService {
     
+    public void readText(ITextReader r){       
+            r.setTextString();
+    }
+    
+    public String getText(ITextReader r){
+        return r.getTextString();
+    }
 }
