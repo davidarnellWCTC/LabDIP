@@ -11,7 +11,7 @@ package dip.lab3;
  */
 public class ConsoleReader implements ITextReader {
 
-    private String text;
+    private String text; 
 
     @Override
     public void setTextString(String text) {
