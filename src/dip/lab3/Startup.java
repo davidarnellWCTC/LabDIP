@@ -15,18 +15,26 @@ public class Startup {
         
         // Texting the objects
         
-        MessageReader readTest = new ConsoleReader();
+        //MessageReader readTest = new ConsoleReader();
+        
+        Message test = new StringMessage("asdf");
+        
+        OutputService os = new OutputService();
+        
+        //String asdf = test.getMessage();
+        
+        
         
         //readTest.setTextString();
         
-        InputService is = new InputService();
-        OutputService os = new OutputService();
-        
-        is.readText(readTest);
-        
-        MessageWriter writeTest = new ConsoleWriter(readTest);
-        
-        os.writeText(writeTest); 
+//        InputService is = new InputService();
+//        OutputService os = new OutputService();
+//        
+//        is.readText(readTest);
+//        
+//        MessageWriter writeTest = new ConsoleWriter(readTest);
+//        
+//        os.writeText(writeTest); 
         
     }
     
