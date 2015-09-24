@@ -7,15 +7,10 @@ package dip.lab3;
 
 /**
  *
- * @author darnell
+ * @author David
  */
-public class InputService {
+public interface MessageWriter {
     
-    public void readText(MessageReader r){       
-            r.setTextString();
-    }
+    public abstract void writeText();
     
-    public String getText(MessageReader r){
-        return r.getTextString();
-    }
 }

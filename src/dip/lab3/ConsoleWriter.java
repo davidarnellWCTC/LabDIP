@@ -9,11 +9,11 @@ package dip.lab3;
  *
  * @author David
  */
-public class ConsoleWriter implements ITextWriter {
+public class ConsoleWriter implements MessageWriter {
 
     private String text;
     
-    public ConsoleWriter(ITextReader r) {
+    public ConsoleWriter(MessageReader r) {
         this.text = r.getTextString();
     }
 

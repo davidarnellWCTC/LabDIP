@@ -9,7 +9,7 @@ package dip.lab3;
  *
  * @author darnell
  */
-public interface ITextReader {
+public interface MessageReader {
     
     public abstract void setTextString();
     public abstract String getTextString();

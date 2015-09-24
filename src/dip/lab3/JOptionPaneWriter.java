@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
  *
  * @author David
  */
-public class JOptionPaneWriter implements ITextWriter{
+public class JOptionPaneWriter implements MessageWriter{
 
     private String text;
     
-    public JOptionPaneWriter(ITextReader r) {
+    public JOptionPaneWriter(MessageReader r) {
         this.text = r.getTextString();
     }
     

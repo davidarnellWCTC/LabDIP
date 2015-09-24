@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author David
  */
-public class JOptionPaneReader implements ITextReader {
+public class JOptionPaneReader implements MessageReader {
 
     String text;
 

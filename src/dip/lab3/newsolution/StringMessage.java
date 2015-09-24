@@ -3,17 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dip.lab3;
+package dip.lab3.newsolution;
 
 /**
  *
- * @author darnell
+ * @author David
  */
-public class OutputService {
+public class StringMessage implements Message {
     
-                
-        public void writeText(MessageWriter r){            
-            r.writeText();            
-        }
+    String message;
+
+    @Override
+    public void getMessage() {
+        
+    }
+
+
     
 }

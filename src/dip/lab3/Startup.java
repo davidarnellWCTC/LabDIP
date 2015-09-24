@@ -15,7 +15,7 @@ public class Startup {
         
         // Texting the objects
         
-        ITextReader readTest = new ConsoleReader();
+        MessageReader readTest = new ConsoleReader();
         
         //readTest.setTextString();
         
@@ -24,7 +24,7 @@ public class Startup {
         
         is.readText(readTest);
         
-        ITextWriter writeTest = new ConsoleWriter(readTest);
+        MessageWriter writeTest = new ConsoleWriter(readTest);
         
         os.writeText(writeTest); 
         

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author darnell
  */
-public class ConsoleReader implements ITextReader {
+public class ConsoleReader implements MessageReader {
     
     Scanner scanner = new Scanner(System.in);
 
