@@ -26,7 +26,7 @@ public class Startup {
         
         ITextWriter writeTest = new ConsoleWriter(readTest);
         
-        os.writeText(writeTest);
+        os.writeText(writeTest); 
         
     }
     
